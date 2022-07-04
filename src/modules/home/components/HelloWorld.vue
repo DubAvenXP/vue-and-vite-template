@@ -7,3 +7,8 @@ const store = useExampleStore()
 <template>
 	<h1>{{ store.getMessage }}</h1>
 </template>
+
+<style lang="sass">
+h1
+	color: red
+</style>
