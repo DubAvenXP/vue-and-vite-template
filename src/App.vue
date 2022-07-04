@@ -1,4 +1,5 @@
 <script setup>
+import { defineAsyncComponent } from "vue"
 import { RouterLink, RouterView } from "vue-router"
 import HelloWorld from "@/components/HelloWorld.vue"
 </script>
@@ -19,6 +20,8 @@ import HelloWorld from "@/components/HelloWorld.vue"
 			<nav>
 				<RouterLink to="/">Home</RouterLink>
 				<RouterLink to="/about">About</RouterLink>
+				<RouterLink to="/transition">Transition</RouterLink>
+				<RouterLink to="/teleport">Teleport</RouterLink>
 			</nav>
 		</div>
 	</header>
@@ -121,5 +124,15 @@ nav a:first-of-type {
 		padding: 1rem 0;
 		margin-top: 1rem;
 	}
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s ease;
 }
 </style>
